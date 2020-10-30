@@ -16,5 +16,9 @@ public class Tester {
     System.out.println(p1.equals(p4));
     System.out.println(p3.equals(p4));
 
+
+    Triangle t1 = new Triangle(p1, p2, p3);
+    System.out.println(t1.getPerimeter());
+
   }
 }
