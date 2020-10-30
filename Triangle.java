@@ -25,4 +25,17 @@ public class Triangle {
     return Math.sqrt((semiP)*(semiP-side1)*(semiP-side2)*(semiP-side3));
   }
 
+  public String classify() {
+    double side1 = v1.distanceTo(v2);
+    double side2 = v1.distanceTo(v3);
+    double side3 = v2.distanceTo(v3);
+    if (side1 == side2 && side2 == side3) {
+      return "Equilateral";
+    }else if (side1 == side2 || side1 == side3 || side2 == side3) {
+      return "Isosceles";
+    }else{
+      return "Scalene";
+    }
+  }
+
 }
